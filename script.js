@@ -132,7 +132,7 @@ allProductBtn.addEventListener("click", () => {
 
 
 
-console.log(allInput.childNodes)
+
 
 
 
@@ -192,5 +192,18 @@ deletee.addEventListener("click", () => {
     optionMenu.style.display = "none";
 
 })
+
+
+edit.addEventListener("click", () => {
+    let idx = selectedIdProduct;
+    let productElement = document.querySelector(`.product[data-id="${idx}"]`);
+    let title = prompt("enter a title");
+    let description = prompt("enter your description")
+    productElement.children[1].children[0].textContent = title;
+    productElement.children[1].children[1].textContent = description;
+})
+
+
+
 
 
